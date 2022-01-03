@@ -1,0 +1,24 @@
+PROCEDURE tri_insertion(n:integer , tab : ARRAY_OF INTEGER)
+VAR
+    i,j : INTEGER;
+    elem: INTEGER;
+BEGIN
+    FOR i FROM 1 TO n STEP 1 DO
+        elem = tab[i];
+        FOR j FROM j=i TO (j > 0 && tab[j-1] > elem) STEP -1  DO
+            tab[j] = tab[j-1];
+              tab[j] = elem;
+        END_FOR
+    END_FOR
+END
+
+ALGORITHM tri_insertion
+VAR
+    i:INTEGER;
+    tab : ARRAY_OF INTEGER[50];
+BEGIN
+    write("donner un tableau");
+    read(n)
+        FOR i FROM 1 TO n STEP 1 DO
+         wrrite(tab[i]);
+END
